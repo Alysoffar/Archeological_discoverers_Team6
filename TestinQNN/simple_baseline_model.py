@@ -13,7 +13,7 @@ print("🎯 Simple approach to achieve R² ≥ 0...")
 print("=" * 50)
 
 # Load data
-df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+df = pd.read_csv('../dataset.csv')
 
 # Target
 y = df['AI Prediction Score'].values / 100.0

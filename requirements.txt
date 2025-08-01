@@ -11,9 +11,15 @@ xgboost>=1.6.0
 # Deep learning (for Classical Model)
 torch>=1.11.0
 
-# Quantum computing
+# Quantum computing (PennyLane ecosystem)
 pennylane>=0.28.0
 pennylane-qiskit>=0.27.0
+
+# Quantum computing (Qiskit ecosystem - required for qnn.ipynb)
+qiskit>=0.39.0
+qiskit-aer>=0.11.0
+qiskit-algorithms>=0.2.0
+qiskit-machine-learning>=0.5.0
 
 # Visualization
 matplotlib>=3.5.0
@@ -22,10 +28,13 @@ seaborn>=0.11.0
 # Data processing and utilities
 tqdm>=4.62.0
 
-# Optional: Enhanced quantum simulators
-# qiskit>=0.39.0  # Uncomment for Qiskit backend support
-# cirq>=1.0.0     # Uncomment for Cirq backend support
+# Development and testing
+pytest>=6.2.0
+jupyter>=1.0.0
+notebook>=6.4.0
 
-# Development and testing (optional)
-# pytest>=6.2.0
-# jupyter>=1.0.0
+# Additional dependencies for data encoding and preprocessing
+dataclasses-json>=0.5.7  # For enhanced dataclass support
+
+# Optional: Enhanced quantum simulators
+# cirq>=1.0.0     # Uncomment for Cirq backend support

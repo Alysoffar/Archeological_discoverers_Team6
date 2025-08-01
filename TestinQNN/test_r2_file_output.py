@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
 # Load data
-df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+df = pd.read_csv('../dataset.csv')
 y = df['AI Prediction Score'].values
 X = df[['Human Activity Index', 'Sonar Radar Detection']].values
 

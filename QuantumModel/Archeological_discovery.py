@@ -665,7 +665,7 @@ class QuantumArchaeologicalOptimizer:
     
     def __init__(self, sites: List[ArchaeologicalSite] = None):
         # Load and use CSV data directly
-        df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+        df = pd.read_csv('dataset.csv')
         self.sites = sites if sites else []  # Keep for compatibility
         self.n_sites = len(df)  # Use CSV data length
         
@@ -689,7 +689,7 @@ class QuantumArchaeologicalOptimizer:
         site_info = []
         
         # Load and preprocess the dataset
-        df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+        df = pd.read_csv('dataset.csv')
         
         # Create period encoder with better handling of Egyptian periods
         self.label_encoders['period'] = LabelEncoder()
@@ -1081,7 +1081,7 @@ class QuantumArchaeologicalOptimizer:
         print("🏺 Using AI Prediction Score directly as ground truth target...")
         
         # Load the dataset
-        df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+        df = pd.read_csv('dataset.csv')
         
         # Use AI prediction score directly as target (normalized to [0,1])
         ai_scores = df['AI Prediction Score'].values / 100.0
@@ -1098,7 +1098,7 @@ class QuantumArchaeologicalOptimizer:
         labels = []
         
         # Load the dataset
-        df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+        df = pd.read_csv('dataset.csv')
         
         for _, row in df.iterrows():
             # Calculate base success probability using CSV features with enhanced weights
@@ -1263,7 +1263,7 @@ class QuantumArchaeologicalOptimizer:
         
         # Load original data to get the specific features that worked
         try:
-            df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+            df = pd.read_csv('dataset.csv')
             
             # Check feature correlations like in our successful test
             feature_cols = ['Human Activity Index', 'Climate Change Impact', 'Sonar Radar Detection', 'Looting Risk (%)']
@@ -1955,7 +1955,7 @@ class QuantumArchaeologicalOptimizer:
         print("⚛️ Running Quantum Variational Optimization (Quantum-Inspired Classical Heuristic)...")
         
         # Load CSV data for cost and time constraints
-        df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+        df = pd.read_csv('dataset.csv')
         
         # Get priority predictions from quantum neural network
         priority_scores = self.qnn.forward(self.X).flatten()
@@ -2783,7 +2783,7 @@ def main_quantum_analysis_pipeline_with_accuracy():
     print("\n🌟 Optimized Site Selection Results:")
     
     # Load CSV data to get site information
-    df = pd.read_csv('Dataset_Arqueologico_Egipto_Expandido.csv')
+    df = pd.read_csv('dataset.csv')
     
     for i, site_id in enumerate(optimization_results['optimized_sequence']):
         # Find the corresponding site data from CSV
